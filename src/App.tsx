@@ -13,7 +13,7 @@ import Testimonials from "./components/Testimonials";
 
 function App() {
   return (
-    <div className="mx-auto max-w-7xl">
+    <div className="mx-auto pt-[80px] max-w-7xl">
       <Navbar />
       <Hero />
       <BrandLabel />

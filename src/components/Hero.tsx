@@ -2,7 +2,7 @@ import { ArrowRight, Play } from "lucide-react";
 
 const Hero = () => {
   return (
-    <div className="min-h-screen  flex flex-col items-center pt-20 overflow-hidden">
+    <div className="min-h-[800px] flex flex-col items-center pt-20 overflow-hidden">
       <div className="w-full max-w-7xl px-8 md:px-12 lg:px-20 flex flex-col">
         <div className="flex items-center gap-2 mb-6">
           <div className="w-2.5 h-2.5 rounded-full bg-[#1A47FE]"></div>

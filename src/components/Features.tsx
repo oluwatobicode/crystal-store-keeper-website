@@ -37,7 +37,7 @@ const Features = () => {
   ];
 
   return (
-    <main className="min-h-screen flex flex-col items-center p-6 md:p-12 lg:p-20 overflow-hidden bg-[#F8F9FA]">
+    <main className="min-h-[800px] flex flex-col items-center p-6 md:p-12 lg:p-20 overflow-hidden bg-[#F8F9FA]">
       <div className="w-full max-w-7xl flex flex-col md:flex-row justify-between gap-6 md:gap-10">
         <div className="flex flex-col">
           <h1 className="text-[12px] text-[#1A47FE] font-bold tracking-[1%] leading-[100%] uppercase">

@@ -1,7 +1,26 @@
+import React from "react";
 import { Check } from "lucide-react";
+import { motion, type Transition } from "motion/react";
 
-const Pricing = () => {
-  const tiers = [
+interface PricingTier {
+  name: string;
+  description: string;
+  price: string;
+  period: string;
+  buttonText: string;
+  buttonVariant: "dark" | "blue";
+  features: string[];
+  isHighlighted: boolean;
+}
+
+const springTransition: Transition = {
+  type: "spring",
+  stiffness: 100,
+  damping: 20,
+};
+
+const Pricing: React.FC = () => {
+  const tiers: PricingTier[] = [
     {
       name: "STARTER",
       description: "For small shops getting started",
@@ -19,7 +38,7 @@ const Pricing = () => {
       isHighlighted: false,
     },
     {
-      name: "PRICING", // Matched exactly to your design
+      name: "PRICING",
       description: "For growing businesses",
       price: "₦15,000",
       period: "/mo",
@@ -64,23 +83,39 @@ const Pricing = () => {
       className="min-h-screen bg-[#F8F9FA] flex flex-col items-center justify-center p-6 md:p-12 lg:p-20 overflow-hidden"
     >
       <div className="flex flex-col items-center text-center mb-16 md:mb-20">
-        <p className="text-[12px] text-[#1A47FE] font-bold tracking-[1%] leading-[100%] uppercase mb-4">
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ ...springTransition, delay: 0.1 }}
+          className="text-[12px] text-[#1A47FE] font-bold tracking-[1%] leading-[100%] uppercase mb-4"
+        >
           Pricing
-        </p>
-        <h2 className="text-[40px] md:text-[56px] font-bold leading-[1.1] tracking-[-2px] text-black">
+        </motion.p>
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ ...springTransition, delay: 0.2 }}
+          className="text-[40px] md:text-[56px] font-bold leading-[1.1] tracking-[-2px] text-black"
+        >
           SIMPLE<span className="text-[#1A47FE]">.</span>
           <br className="hidden md:block" /> TRANSPARENT
           <span className="text-[#1A47FE]">.</span>
-        </h2>
+        </motion.h2>
       </div>
 
       <div className="w-full max-w-6xl flex flex-col lg:flex-row items-center lg:items-stretch justify-center gap-8 lg:gap-6">
         {tiers.map((tier, index) => (
-          <div
+          <motion.div
             key={index}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ ...springTransition, delay: 0.3 + index * 0.15 }}
             className={`flex flex-col w-full lg:w-1/3 p-8 md:p-10 transition-all ${
               tier.isHighlighted
-                ? "bg-[#1A1A1A] border-t-[6px] border-[#1A47FE]"
+                ? "bg-[#1A1A1A] border-t-[6px] border-[#1A47FE] shadow-xl"
                 : "bg-transparent"
             }`}
           >
@@ -143,7 +178,7 @@ const Pricing = () => {
                 </li>
               ))}
             </ul>
-          </div>
+          </motion.div>
         ))}
       </div>
     </main>

@@ -59,7 +59,10 @@ const Pricing = () => {
   ];
 
   return (
-    <main className="min-h-screen bg-[#F8F9FA] flex flex-col items-center justify-center p-6 md:p-12 lg:p-20 overflow-hidden">
+    <main
+      id="pricing"
+      className="min-h-screen bg-[#F8F9FA] flex flex-col items-center justify-center p-6 md:p-12 lg:p-20 overflow-hidden"
+    >
       <div className="flex flex-col items-center text-center mb-16 md:mb-20">
         <p className="text-[12px] text-[#1A47FE] font-bold tracking-[1%] leading-[100%] uppercase mb-4">
           Pricing

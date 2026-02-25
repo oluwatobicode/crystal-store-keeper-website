@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-scroll";
 
 interface NavLink {
   name: string;
@@ -22,11 +23,11 @@ const Navbar: React.FC = () => {
   }, [isMobileMenuOpen]);
 
   const navLinks: NavLink[] = [
-    { name: "FEATURES", href: "#features" },
-    { name: "HOW IT WORKS", href: "#how-it-works" },
-    { name: "TESTIMONIALS", href: "#testimonials" },
-    { name: "PRICING", href: "#pricing" },
-    { name: "FAQ", href: "#faq" },
+    { name: "FEATURES", href: "features" },
+    { name: "HOW IT WORKS", href: "how-it-works" },
+    { name: "TESTIMONIALS", href: "testimonials" },
+    { name: "PRICING", href: "pricing" },
+    { name: "FAQ", href: "faq" },
   ];
 
   const toggleMenu = (): void => {
@@ -47,10 +48,11 @@ const Navbar: React.FC = () => {
             {navLinks.map((link, index) => (
               <a
                 key={index}
-                href={link.href}
-                className="text-[13px] font-bold text-[#878A92] hover:text-[#1A47FE] transition-colors tracking-[1%]"
+                className="text-[13px] cursor-pointer font-bold text-[#878A92] hover:text-[#1A47FE] transition-colors tracking-[1%]"
               >
-                {link.name}
+                <Link to={link.href} smooth={true} duration={500}>
+                  {link.name}
+                </Link>
               </a>
             ))}
           </div>
@@ -103,11 +105,12 @@ const Navbar: React.FC = () => {
           {navLinks.map((link, index) => (
             <a
               key={index}
-              href={link.href}
               onClick={() => setIsMobileMenuOpen(false)}
               className="text-[20px] font-bold  text-[#21242C] hover:text-[#1A47FE] transition-colors tracking-tight"
             >
-              {link.name}
+              <Link to={link.href} smooth={true} duration={500}>
+                {link.name}
+              </Link>
             </a>
           ))}
 

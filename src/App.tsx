@@ -5,6 +5,7 @@ import FAQ from "./components/FAQ";
 import Features from "./components/Features";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
+import HowItWorks from "./components/HowItWorks";
 import Inventory from "./components/Inventory";
 import Navbar from "./components/Navbar";
 import PointOfSale from "./components/PointOfSale";
@@ -13,7 +14,7 @@ import Testimonials from "./components/Testimonials";
 
 function App() {
   return (
-    <div className="mx-auto pt-[80px] max-w-7xl">
+    <div className="mx-auto pt-[80px]">
       <Navbar />
       <Hero />
       <BrandLabel />
@@ -21,6 +22,7 @@ function App() {
       <PointOfSale />
       <Inventory />
       <Analytics />
+      <HowItWorks />
       <Testimonials />
       <Pricing />
       <FAQ />
@@ -31,3 +33,9 @@ function App() {
 }
 
 export default App;
+
+/* todo
+1) animations with framer motion
+2) make the navbar work with react scroll --done
+3) add the how it works section --done
+*/

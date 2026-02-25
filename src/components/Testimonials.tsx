@@ -30,7 +30,10 @@ const Testimonials = () => {
   };
 
   return (
-    <main className="min-h-[500px] bg-[#1A1A1A] flex flex-col items-center justify-center p-6 md:p-12 lg:p-20 overflow-hidden">
+    <main
+      id="testimonials"
+      className="min-h-[500px] bg-[#1A1A1A] flex flex-col items-center justify-center p-6 md:p-12 lg:p-20 overflow-hidden"
+    >
       <div className="w-full max-w-7xl flex flex-col">
         <div className="flex flex-col gap-2 mb-10 md:mb-16">
           <p className="text-[12px] text-[#1A47FE] font-bold tracking-[1%] leading-[100%] uppercase mb-2">

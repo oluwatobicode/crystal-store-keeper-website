@@ -59,13 +59,19 @@ const Navbar: React.FC = () => {
 
           <div className="hidden lg:flex items-center gap-6">
             <a
-              href="#login"
+              href="https://crystal-stock-keeper.vercel.app/"
+              target="_blank"
               className="text-[15px] font-semibold text-[#5A5C63] hover:text-[#1A47FE] transition-colors"
             >
               Log In
             </a>
             <button className="bg-black text-white px-7 py-3 rounded-full text-[14px] font-bold tracking-wide hover:bg-gray-800 transition-colors">
-              Get Started
+              <a
+                href="https://crystal-stock-keeper.vercel.app/signup"
+                target="_blank"
+              >
+                Get Started
+              </a>
             </button>
           </div>
 

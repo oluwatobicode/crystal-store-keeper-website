@@ -35,7 +35,8 @@ function App() {
 export default App;
 
 /* todo
-1) animations with framer motion
+1) animations with framer motion --done
 2) make the navbar work with react scroll --done
 3) add the how it works section --done
+4) fix the mobile screen navbar
 */

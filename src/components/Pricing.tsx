@@ -152,7 +152,7 @@ const Pricing: React.FC = () => {
             </div>
 
             <button
-              className={`w-full py-4 rounded-full text-[13px] font-bold tracking-wide transition-colors mb-10 ${
+              className={`w-full py-4 cursor-pointer rounded-full text-[13px] font-bold tracking-wide transition-colors mb-10 ${
                 tier.buttonVariant === "blue"
                   ? "bg-[#1A47FE] text-white hover:bg-blue-700"
                   : "bg-[#1A1A1A] text-white hover:bg-black"

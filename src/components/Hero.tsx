@@ -50,11 +50,19 @@ const Hero: React.FC = () => {
 
             <div className="flex flex-wrap gap-4">
               <button className="flex cursor-pointer items-center justify-center gap-3 px-8 h-[52px] rounded-full bg-[#1A47FE] text-white text-[12px] uppercase font-bold tracking-wide hover:bg-blue-700 transition-colors">
-                Start Free Trial
+                <a
+                  target="_blank"
+                  href="https://crystal-stock-keeper.vercel.app/signup"
+                >
+                  Start Free Trial
+                </a>
                 <ArrowRight size={18} />
               </button>
 
-              <button className="flex cursor-pointer items-center justify-center gap-3 px-8 h-[52px] rounded-full bg-transparent border border-black text-black text-[12px] uppercase font-bold tracking-wide hover:bg-gray-100 transition-colors">
+              <button
+                disabled
+                className="cursor-not-allowed flex items-center justify-center gap-3 px-8 h-[52px] rounded-full bg-transparent border border-black text-black text-[12px] uppercase font-bold tracking-wide hover:bg-gray-100 transition-colors"
+              >
                 <Play size={18} />
                 Watch Demo
               </button>

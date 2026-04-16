@@ -42,11 +42,21 @@ const CTA: React.FC = () => {
           className="flex flex-col sm:flex-row items-center gap-4 mb-10 w-full sm:w-auto"
         >
           <button className="w-full cursor-pointer sm:w-auto flex items-center justify-center gap-2 bg-[#1A47FE] text-white px-10 py-4 rounded-full text-[13px] md:text-[14px] font-bold tracking-wide hover:bg-blue-700 transition-colors">
-            START FREE TRIAL <ArrowRight className="w-4 h-4" />
+            <a
+              target="_blank"
+              href="https://crystal-stock-keeper.vercel.app/signup"
+            >
+              Start Free Trial <ArrowRight className="w-4 h-4" />
+            </a>
           </button>
 
           <button className="w-full cursor-pointer sm:w-auto flex items-center justify-center bg-transparent border border-[#333333] text-white px-10 py-4 rounded-full text-[13px] md:text-[14px] font-bold tracking-wide hover:bg-[#212121] transition-colors">
-            TALK TO SALES
+            <a
+              target="_blank"
+              href="https://api.whatsapp.com/send?phone=2348065267025&text=Hello%2C%20I%20am%20intrested%20in%20using%20crystal%20store%20keeper"
+            >
+              TALK TO SALES
+            </a>
           </button>
         </motion.div>
 

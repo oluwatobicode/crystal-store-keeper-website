@@ -1,9 +1,9 @@
 import React from "react";
 import { motion, type Transition } from "motion/react";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Bot } from "lucide-react";
 
 interface FeatureItem {
-  icon: string;
+  icon: string | React.ReactNode;
   title: string;
   description: string;
 }
@@ -47,6 +47,12 @@ const Features: React.FC = () => {
       icon: "./wallet-icon.svg",
       title: "Multi-Payment",
       description: "Cash, POS, transfers, split payments in one transaction.",
+    },
+    {
+      icon: <Bot className="w-6 h-6" />,
+      title: "Telegram AI Bot",
+      description:
+        "Ask your store anything via Telegram. Get real-time sales, stock, and revenue insights instantly.",
     },
   ];
 
@@ -114,16 +120,19 @@ const Features: React.FC = () => {
               <ArrowUpRight className="w-5 h-5 text-black group-hover:text-[#1A47FE] transition-colors duration-300" />
             </div>
 
-            <img
-              src={feature.icon}
-              className="w-[25px] h-[25px] mb-4 group-hover:brightness-0 group-hover:invert transition-all duration-300"
-              alt={feature.title}
-            />
-
-            <h3 className="text-[20px] font-bold leading-[0.9] tracking-[-2px] text-black group-hover:text-[#666666] transition-colors duration-300 mb-3">
+            {typeof feature.icon === "string" ? (
+              <img
+                src={feature.icon}
+                alt={feature.title}
+                className="w-6 h-6 hover:text-[#fff]"
+              />
+            ) : (
+              feature.icon
+            )}
+            <h3 className="text-[20px] font-bold leading-[0.9] tracking-[-2px] text-black group-hover:text-[#fff] transition-colors duration-300 mb-3">
               {feature.title}
             </h3>
-            <p className="text-[14px] leading-[100%] tracking-tight text-[#21242C] group-hover:text-[#666666] transition-colors duration-300">
+            <p className="text-[14px] leading-[100%] tracking-tight text-[#21242C] group-hover:text-[#fff] transition-colors duration-300">
               {feature.description}
             </p>
           </motion.div>

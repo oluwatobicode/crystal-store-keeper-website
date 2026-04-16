@@ -122,10 +122,20 @@ const Navbar: React.FC = () => {
 
           <div className="flex flex-col gap-4 mt-8 w-full max-w-xs">
             <button className="w-full text-center py-4 text-[16px] font-semibold text-[#5A5C63] border border-gray-300 rounded-full hover:bg-gray-100 transition-colors">
-              Log In
+              <a
+                target="_blank"
+                href="https://crystal-stock-keeper.vercel.app/"
+              >
+                Log In
+              </a>
             </button>
             <button className="w-full text-center py-4 bg-black text-white rounded-full text-[16px] font-bold hover:bg-gray-800 transition-colors">
-              Get Started
+              <a
+                target="_blank"
+                href="https://crystal-stock-keeper.vercel.app/signup"
+              >
+                Get Started
+              </a>
             </button>
           </div>
         </div>
